@@ -1,0 +1,107 @@
+@import 'variables';
+@import 'functions';
+
+//  General
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $body-bg;
+  font-family: $main-font;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: $container;
+  margin: auto;
+  padding: 0 20px;
+}
+
+header#main-header {
+  padding: 1em;
+  background: $primary-color;
+  color: set-text-color($primary-color);
+
+  h1 {
+    font-size: 40px;
+  }
+}
+
+nav#main-nav {
+  background: $secondary-color;
+  height: 40px;
+
+  ul {
+    padding-top: 10px;
+  }
+
+  li {
+    display: inline;
+  }
+
+  a {
+    color: #fff;
+    padding-right: 20px;
+
+    &:hover {
+      color: #ccc;
+    }
+  }
+}
+
+.main-wrap {
+  background: $light-color;
+  color: set-text-color($light-color);
+  min-height: calc(100vh - 100px);
+}
+
+.section {
+  padding: $section-padding;
+
+  h1 {
+    margin-bottom: 30px;
+  }
+}
+
+#section-a {
+  @extend .section;
+  background: $light-color;
+  color: set-text-color($light-color);
+}
+#section-b {
+  @extend .section;
+  background: $dark-color;
+  color: set-text-color($dark-color);
+}
+
+.button {
+  padding: 10px 15px;
+}
+
+.button-a {
+  @extend .button;
+  background: darken($primary-color, 10%);
+  color: set-text-color($primary-color);
+}
+.button-b {
+  @extend .button;
+  background: lighten($secondary-color, 10%);
+  color: set-text-color($secondary-color);
+}
+
+footer#main-footer {
+  background: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100px;
+}
